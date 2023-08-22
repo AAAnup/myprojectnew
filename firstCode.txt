@@ -1,0 +1,8 @@
+declare
+a_proc_error varchar2(1000);
+a_proc_error1 varchar2(1000);
+begin
+ select 'MyName' into a_proc_error  from dual;
+ dbms_output.put_line(a_proc_error||sqlerrm);
+ dbms_output.put_line(a_proc_error1||sqlerrm);
+end;
